@@ -25,7 +25,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     font-family: "Roboto", sans-serif;
-    background: #23232e;
+    background: #656565;
     height: 8vh;
 }
 
@@ -69,7 +69,7 @@ main{
         right: 0;
         width: 50vw;
         height: 92vh;
-        background: #23232e;
+        background: #656565;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
