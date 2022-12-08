@@ -6,23 +6,8 @@ const Login = () => {
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        console.log('evento', event);
-        
         const form = event.target;
         const data = new FormData(form);
-        // console.log(form.elements);
-
-        // for(let key in form.elements){
-        //     console.log(form.elements[key]);
-        // }
-
-        // const inputs = form.querySelectorAll('input');
-
-        // inputs.forEach((item) => {
-        //     data.append(item.name, item.value);
-        //     // console.log(item.value)
-        // })
-
         for(const pair of data.entries()){
             console.log(pair)
         }
@@ -43,10 +28,12 @@ const Login = () => {
                         const email = data.get('email');
                         const found = content.filter(item => item.email === email).map(item => { return item.nome });
                         const alert = document.querySelector('.alert');
-                        console.log(found)
+                        const input = document.querySelector('inputPass');
+                    
 
                         alert.classList.remove('alert-success');
                         alert.classList.remove('alert-danger');
+
 
                         if(found.length > 0){
                             const userName = found[0];
